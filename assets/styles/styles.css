@@ -1,0 +1,127 @@
+:root{
+    --godgreen: rgb(0, 135, 108);
+    --shinegoodgree: rgb(0, 255, 157);
+    --softblack:  rgb(30, 30, 30);
+    --lightgray: rgb(211, 211, 211);
+    --white: white;
+}
+
+html{
+    font-family: 'Inconsolata', monospace;
+    background-color: var(--softblack);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: grid;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid var(--shinegoodgree);
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--softblack);
+    color: var(--white);
+}
+.navbar p {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    margin-inline-start: 30px;
+}
+.navbar button{
+    width: 100px;
+    height: 40px;
+    justify-self: end;
+    margin-inline-end: 50px;
+    background-color: var(--godgreen);
+    border-radius: 20px;
+    border: none;
+    transition: 1s;
+}
+
+.navbar button:hover{
+    background-color: var(--shinegoodgree);
+}
+.navbar button a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+}
+.header-top{
+    width: 100%;
+    height: 640px;
+    display: grid;
+    place-items: center;
+    background-image: url('../imgs/blackbanner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.header-top section{
+    width: 860px;
+    height: 315px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 60px 35px 35px;
+}
+.tittle-Header{
+    font-size: 45px;
+    color: var(--white);
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.text-header{
+    font-size: 20px;
+    color: var(--white);
+    font-weight: bold;
+    border-top: 1px solid ;
+    padding-top: 15px;
+}
+.button-header{
+    margin-top: 50px;
+    width: 200px;
+    height: 45px;
+    background-color: var(--godgreen);
+    border-radius: 20px;
+    border: none;
+    transition: 1s;
+}
+.button-header:hover{
+    background-color: var(--shinegoodgree);
+}
+.button-header a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+}
+.main-container{
+    width: 100%;
+    height: 1000px;
+    display: grid;
+    place-items: center;
+}
+.about-me{
+    width: 1200px;
+    height: 800px;
+    text-align: center;
+}
+.about-me h1{
+    font-size: 55px;
+    font-weight: bold;
+    color: var(--white);
+}
+.about-me p {
+    font-size: 20px;
+    color: var(--white);
+}
+.about-me a{
+    color: var(--godgreen);
+}
