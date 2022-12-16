@@ -2,28 +2,51 @@
     --godgreen: rgb(0, 135, 108);
     --shinegoodgree: rgb(0, 255, 157);
     --softblack:  rgb(30, 30, 30);
-    --lightgray: rgb(211, 211, 211);
     --white: white;
+    --lightblack:rgb(40, 40, 40);
 }
 
 html{
     font-family: 'Inconsolata', monospace;
     background-color: var(--softblack);
+    scroll-behavior: smooth;
 }
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
+.go-top{
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--godgreen);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+    opacity: 0;
+    transition: 1s;
+}
+.go-top:hover{
+    background-color: var(--shinegoodgree);
+}
+
 .navbar{
     display: grid;
     width: 100%;
     height: 60px;
-    border-bottom: 1px solid var(--shinegoodgree);
+    border-bottom: 0.2px solid var(--shinegoodgree);
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     background-color: var(--softblack);
     color: var(--white);
+}
+.navbar:hover .go-top{
+    opacity: 0;
 }
 .navbar p {
     margin: 0;
@@ -32,7 +55,7 @@ body{
     margin-inline-start: 30px;
 }
 .navbar button{
-    width: 100px;
+    width: 150px;
     height: 40px;
     justify-self: end;
     margin-inline-end: 50px;
@@ -61,7 +84,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    box-shadow: 0px 10px 15px -7px var(--godgreen);
 }
 .header-top section{
     width: 860px;
@@ -80,7 +103,7 @@ body{
     font-size: 20px;
     color: var(--white);
     font-weight: bold;
-    border-top: 1px solid ;
+    border-top: 2px solid var(--white);
     padding-top: 15px;
 }
 .button-header{
@@ -104,9 +127,12 @@ body{
 }
 .main-container{
     width: 100%;
-    height: 1000px;
+    height: 100%;
     display: grid;
     place-items: center;
+}
+.main-container:hover .go-top{
+    opacity: 1;
 }
 .about-me{
     width: 1200px;
@@ -123,5 +149,180 @@ body{
     color: var(--white);
 }
 .about-me a{
+    color: var(--shinegoodgree);
+    text-decoration: none;
+}
+.last-p{
+    margin-bottom: 70px;
+}
+.imgs-aboutMe-container{
+    width: 896px;
+    height: 190px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    margin-left: 140px;
+
+}
+.imgs-aboutme-1{
+    background-image: url('../imgs/Udemy-Emblem.png');
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.imgs-aboutme-2{
+    background-image: url('../imgs/alura.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.imgs-aboutme-3{
+    background-image: url('../imgs/oracle-icon.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.imgs-aboutme-4{
+    background-image: url('../imgs/index.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.skills{
+    width: 100%;
+    height: 1000px;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+.skills h1{
+    place-self: center;
+    font-size: 50px;
+    margin: 0;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--white);
+    color: var(--white);
+}
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+}
+.skill{
+    border-radius: 30px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: 1s;
+}
+.skill:hover{
+    transform: rotateX(180deg);
+    transition: 1s;
+}
+.face {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: grid;
+    place-items: center;
+}
+.front{
+    background-color: var(--lightblack);
+    position: absolute;
+}
+.skill-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.one{
+    background-image: url('../imgs/javascript.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.two{
+    background-image: url('../imgs/html.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.three{
+    background-image: url('../imgs/css.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.four{
+    background-image: url('../imgs/git.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.five{
+    background-image: url('../imgs/python.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.six{
+    background-image: url('../imgs/dsa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.back{
+    background-color: var(--lightblack);
+    position: absolute;
+    transform: rotateX(180deg);
+    font-size: 30px;
+    color: var(--shinegoodgree);
+    text-decoration: none;
+}
+.contact-me{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    margin-top: 100px;
+}
+.contact-me  h1{
+    place-self: center;
+    font-size: 50px;
+    margin: 0;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--white);
+    color: var(--white);
+    
+}
+.main-contact{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 70px);
+    column-gap: 10px;
+    row-gap: 20px;
+}
+.network{
+    background-color: var(--lightblack);
+    border-radius: 40px;
+    display: grid;
+    place-items: center;
+}
+.network a {
+    font-size: 30px;
     color: var(--godgreen);
+    text-decoration: none;
+    transition: 1s;
+}
+.network:hover a{
+    color: var(--shinegoodgree);
 }
